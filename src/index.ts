@@ -1,7 +1,7 @@
 // noinspection HttpUrlsUsage
 
 import express, {Express,} from 'express';
-import {log} from "./utils/logger";
+import {writeLog} from "./utils/logger";
 import * as admin from "firebase-admin";
 import {environment} from "./environment/environment";
 import {interceptors} from "./middleware/interceptors";
@@ -36,5 +36,5 @@ getControllers().forEach((controller) => {
 });
 
 app.listen(port, () => {
-    log(`⚡️ Server is running at http://${myIPv4()}:${port}`);
+    writeLog('info',`⚡️ Server is running at http://${myIPv4()}:${port}`);
 });
