@@ -8,11 +8,13 @@ import {interceptors} from "./middleware/interceptors";
 import {HttpServer} from "./middleware/controllers";
 import {myIPv4} from "./utils/ipv4";
 import {getControllers} from "./middleware/controllers/controllers";
+import * as dotenv from 'dotenv';
+dotenv.config()
 
 export type UserRole = "storeOwner" | "buyer";
 export type MyClaims = 'authenticated' | UserRole; // TODO: add OR operation with our own claims;
 
-
+console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS)
 if(!environment?.firebase?.credentials?.project_id?.length){
     throw Error('Missing Firebase Credentials. Please, check the "Getting Started" section');
 }
@@ -38,3 +40,5 @@ getControllers().forEach((controller) => {
 app.listen(port, () => {
     writeLog('info',`⚡️ Server is running at http://${myIPv4()}:${port}`);
 });
+
+export const db = admin.firestore();

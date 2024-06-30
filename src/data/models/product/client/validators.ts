@@ -1,4 +1,4 @@
-import {HttpResponseError} from "../../../../utils/http-response-error";
+import {HttpResponseError} from "../../../../utils/httpResponseError";
 
 
 export function validateProductName(name) {

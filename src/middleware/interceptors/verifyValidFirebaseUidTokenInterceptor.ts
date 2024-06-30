@@ -2,7 +2,7 @@ import {NextFunction, Request, Response} from "express";
 import * as admin from "firebase-admin";
 import assert from "node:assert";
 import {MyClaims} from "../../index";
-import {ErrorResponseBody} from "../../utils/http-response-error";
+import {ErrorResponseBody} from "../../utils/httpResponseError";
 import {logError} from "../../utils/logger";
 
 

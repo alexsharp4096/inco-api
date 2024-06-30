@@ -1,11 +1,11 @@
-import {Controller, HttpServer} from "../index";
+import {Controller, HttpServer} from "./index";
 import {NextFunction, Request, RequestHandler, Response} from "express";
-import {productsService} from "../../../services/products-service";
-import {HttpResponseError} from "../../../utils/http-response-error";
-import {Product} from "../../../data/product";
-import {ProductClientModel} from "../../../data/models/product/client/product-client-model";
-import {PartialProductClientModel} from "../../../data/models/product/client/partial-product-client-model";
-import {logInfo} from "../../../utils/logger";
+import {productsService} from "../../services/productsService";
+import {HttpResponseError} from "../../utils/httpResponseError";
+import {Product} from "../../data/product";
+import {ProductClientModel} from "../../data/models/product/client/productClientModel";
+import {PartialProductClientModel} from "../../data/models/product/client/partialProductClientModel";
+import {logInfo} from "../../utils/logger";
 
 
 export class ProductController implements Controller {

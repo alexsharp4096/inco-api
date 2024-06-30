@@ -1,7 +1,7 @@
-import {Controller, HttpServer} from "../index";
+import {Controller, HttpServer} from "./index";
 import {RequestHandler} from "express";
-import {accountsService} from "../../../services/accounts-service";
-import {UserClientModel} from "../../../data/models/user/client/user-client-model";
+import {accountsService} from "../../services/accountsService";
+import {UserClientModel} from "../../data/models/user/client/userClientModel";
 
 
 export class AccountController implements Controller {
