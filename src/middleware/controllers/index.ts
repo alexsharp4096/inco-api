@@ -1,6 +1,6 @@
 import {Express, NextFunction, Request, RequestHandler, Response} from "express";
 import {MyClaims} from "../../index";
-import {ErrorResponseBody, HttpResponseError} from "../../utils/http-response-error";
+import {ErrorResponseBody, HttpResponseError} from "../../utils/httpResponseError";
 import {logError, logWarn} from "../../utils/logger";
 
 

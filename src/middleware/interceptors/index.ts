@@ -1,5 +1,5 @@
 import {Request, Response, NextFunction} from "express";
-import {verifyValidFirebaseUidTokenInterceptor} from "./verify-valid-firebase-uid-token-interceptor";
+import {verifyValidFirebaseUidTokenInterceptor} from "./verifyValidFirebaseUidTokenInterceptor";
 import bodyParser from "body-parser";
 
 

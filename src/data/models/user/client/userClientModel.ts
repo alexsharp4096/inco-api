@@ -21,16 +21,12 @@ export class UserClientModel extends User {
     }
 
     static empty() : UserClientModel {
-        return new UserClientModel('','','' as any,'', new Date());
+        return new UserClientModel('','',false,false);
     }
 
     toBody() {
         return {
             [UserClientModel.kUid]: this.uid,
-            [UserClientModel.kName]: this.name,
-            [UserClientModel.kRole]: this.role,
-            [UserClientModel.kEmail]: this.email,
-            [UserClientModel.kBirthDateMillisecondsSinceEpoch]: this.birthDate.getTime(),
         };
     }
 
@@ -43,11 +39,7 @@ export class UserClientModel extends User {
 
         return Object.assign(
             new UserClientModel(
-                null,
-                body[UserClientModel.kName],
-                body[UserClientModel.kRole],
-                body[UserClientModel.kEmail],
-                new Date(body[UserClientModel.kBirthDateMillisecondsSinceEpoch]),
+                '','',false,false
             ),
             {  password: body[UserClientModel.kPassword], }
         )

@@ -1,4 +1,4 @@
-import {Controller, HttpServer} from "../index";
+import {Controller, HttpServer} from "./index";
 import {RequestHandler} from "express";
 
 let counter:number = 1;

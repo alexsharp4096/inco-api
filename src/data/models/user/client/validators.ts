@@ -1,4 +1,5 @@
-import {HttpResponseError} from "../../../../utils/http-response-error";
+import { isBooleanObject } from "util/types";
+import {HttpResponseError} from "../../../../utils/httpResponseError";
 import {validateEmail} from "../../../../utils/validators";
 
 
@@ -6,7 +7,6 @@ export function validateUserName(name:string) {
     if(!name?.length)
         throw new HttpResponseError(400, 'BAD_REQUEST', 'Invalid "name"');
 }
-
 export function validateUserEmail(email:string) {
     if(!validateEmail(email))
         throw new HttpResponseError(400, 'BAD_REQUEST', 'Invalid "email"');

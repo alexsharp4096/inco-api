@@ -5,7 +5,7 @@ import {
     validateProductPrice,
     validateStockQuantity
 } from "./validators";
-import {ProductClientModel} from "./product-client-model";
+import {ProductClientModel} from "./productClientModel";
 
 
 export class PartialProductClientModel {

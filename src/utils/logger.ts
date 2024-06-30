@@ -1,6 +1,10 @@
 const {Logging} = require('@google-cloud/logging');
-const logging = new Logging()
-const log = logging.log('log')
+
+const logging = new Logging({
+    projectId: process.env.projectId,
+    keyFileName: process.env.GOOGLE_APPLICATION_CREDENTIALS
+});
+const log = logging.log('log');
 const resource = {
     type: 'global', // You can change this to a more specific resource type if needed
 };
@@ -18,6 +22,7 @@ export type Level =
 
 
 export async function writeLog(severity, message, additionalData = {}) {
+
     const entry = log.entry({ resource, severity, ...additionalData }, message);
     try {
         await log.write(entry);

@@ -1,9 +1,9 @@
 import {Product} from "../data/product";
 import {firestore} from "firebase-admin";
 import * as admin from "firebase-admin";
-import {ProductFirestoreModel} from "../data/models/product/firestore/product-firestore-model";
+import {ProductFirestoreModel} from "../data/models/product/firestore/productFirestoreModel";
 import FieldValue = firestore.FieldValue;
-import {PartialProductFirestoreModel} from "../data/models/product/firestore/partial-product-firestore-model";
+import {PartialProductFirestoreModel} from "../data/models/product/firestore/partialProductFirestoreModel";
 
 
 export class ProductsService {
